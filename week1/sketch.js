@@ -1,8 +1,15 @@
 function setup() {
     createCanvas(640,480);
-    background('green');
-    ellipse(50,50,50);
-    arc(150,50,50,75,0,PI+1);
-    line(50,50,150,50);
-    quad(75,75,150,150,80,180,50,65);
+    background('black');
+    //nose
+    ellipse(320,240,50);
+    stroke('white');
+    //whiskers
+    line(270,240,150,240);
+    line(370,240,490,240);
+    line(270,250,150,300);
+    line(370,250,490,300);
+    line(270,230,150,180);
+    line(370,230,490,180);
+    
 }
