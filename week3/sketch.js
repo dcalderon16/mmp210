@@ -3,22 +3,29 @@ function setup() {
 
     var str1 = "DYLAN"
 
+    var a = 75
+    var b = 20
+    var c = 155
+    var d = 203
+    var e = 50
+
     textFont("Helvetica");
-    textSize(100);
-    text("DYLAN", 50, 150);
+    textSize(e+e);
+    text("DYLAN", e, c-5);
     fill("pink");
-    triangle(50, 75, 78, 20, 106, 75);
-    triangle(106, 75, 134, 20, 162, 75);
-    triangle(162, 75, 190, 20, 218, 75);
-    triangle(218, 75, 246, 20, 274, 75);
-    triangle(274, 75, 302, 20, 330, 75);
-    triangle(330, 75, 358, 20, 386, 75);
+
+    triangle(e, a, 78, b, 106, a);
+    triangle(106, a, 134, b, 162, a);
+    triangle(162, a, 190, b, 218, a);
+    triangle(218, a, 246, b, 274, a);
+    triangle(274, a, 302, b, 330, a);
+    triangle(330, a, 358, b, 386, a);
     //bottom
-    triangle(50, 155, 78, 203, 106, 155);
-    triangle(106, 155, 135, 203, 162, 155);
-    triangle(162, 155, 190, 203, 218, 155);
-    triangle(218, 155, 246, 203, 274, 155);
-    triangle(274, 155, 302, 203, 330, 155);
-    triangle(330, 155, 358, 203, 386, 155);
+    triangle(e, c, 78, d, 106, c);
+    triangle(106, c, 135, d, 162, c);
+    triangle(162, c, 190, d, 218, c);
+    triangle(218, c, 246, d, 274, c);
+    triangle(274, c, 302, d, 330, c);
+    triangle(330, c, 358, d, 386, c);
 
 }

@@ -1,9 +1,12 @@
 function setup() {
-    createCanvas(640, 480);
-    background("white");
-    translate(width/2, height/2);
+  createCanvas(640, 480);
 }
+
 function draw() {
-    rotate(PI*frameCount/100);
-    rect(0, 0, 100, 100);
+  if (mouseIsPressed) {
+    fill(0);
+  } else {
+    fill(255);
+  }
+  ellipse(mouseX, mouseY, 80, 80);
 }

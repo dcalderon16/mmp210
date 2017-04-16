@@ -1,6 +1,6 @@
 function setup() {
     createCanvas(640, 480)
-    
+    //colors
     var orange = color(255, 204, 51);
     var purple = color(138, 0, 184);
     var beige = color(225, 204, 153);
@@ -8,66 +8,72 @@ function setup() {
     var pink = color(255,153,204);
     var black = color(0,0,0);
     var brown = color (153,102,0);
+    //numbers
+    var a = 400;
+    var b = 50;
+    var c = 5;
+    var d = 200;
+    var e = 80;
 
     noStroke();
     
     //pencil
     fill(orange);
-    rect(400, 50, 50, 370);
+    rect(a, b, b, a-30);
 
     fill(beige);
-    triangle(400,50, 425,5, 450,50);
+    triangle(a, b, a+25, c, a+50, b);
 
     fill(gray);
-    rect(400,400,50,50);
+    rect(a, a, b, b);
 
     fill(pink);
-    rect(400,430,50,40);
+    rect(a, a+30, b, b-10);
 
     fill(black);
-    triangle(411,30, 425,5, 439,30);
+    triangle(a+11, b-20, a+25, c, a+39, b-20);
 
     //brush 1
     fill(brown);
-    rect(300, 50, 50,420, 30);
+    rect(a-100, b, b, a+20, b-20);
 
     fill(gray);
-    rect(287, 50, 80, 70, 20);
+    rect(d+87, b, e, e-10, b-30);
 
     fill(beige);
-    rect(287, 30, 80, 70);
+    rect(d+87, b-20, e, e-10);
     
     fill(purple);
-    rect(287, 10, 80, 40);
+    rect(d+87, c+c, e, e-40);
 
     //pencil 2
     fill(orange);
-    rect(200, 50, 50, 370);
+    rect(d, b, b, a-30);
 
     fill(beige);
-    triangle(200,50, 225,5, 250,50);
+    triangle(d, b, d+25, c, d+50, b);
 
     fill(gray);
-    rect(200,400,50,50);
+    rect(d, a, b, b);
 
     fill(pink);
-    rect(200,430,50,40);
+    rect(d, a+30, b, b-10);
 
     fill(black);
-    triangle(211,30, 225,5, 239,30);
+    triangle(d+11, b-20, d+25,5, d+39, b-20);
 
     //brush 2
     fill(brown);
-    rect(100, 50, 50,420, 30);
+    rect(d-100, b, b, a+20, b-20);
 
     fill(gray);
-    rect(87, 50, 80, 70, 20);
+    rect(e+7, b, e, e-10, b-30);
 
     fill(beige);
-    rect(87, 30, 80, 70);
+    rect(e+7, b-20, e, e-10);
     
     fill(purple);
-    rect(87, 10, 80, 40);
+    rect(e+7, c+c, e, b-10);
 
 
 }
