@@ -1,18 +1,12 @@
-// midterm - generative pattern
-
 function setup() {
     createCanvas(640, 640);
     background(0);
     
    noStroke();
     
-    var numberOfRectangles = 200;
-    var columns = Math.sqrt(numberOfRectangles);
-    var rows = Math.sqrt(numberOfRectangles);
-    
-//    var rows = 5;
-//    var columns = numberOfRectangles / rows;
-    
+    var numberOfPlanets = 200;
+    var columns = Math.sqrt(numberOfPlanets);
+    var rows = Math.sqrt(numberOfPlanets);
     var w = width / columns;
     var h = height / rows;
 
@@ -24,46 +18,33 @@ function setup() {
             var tempW = w;
             var tempH = h;
             
-            // rain
+            // top planets
             if (y < height/5) {
-                // random rain blue color
+                // random pastels
                 r = random(107, 229);
                 g = random(107, 229);
                 b = random(107, 259);
-                //random rain size and position
                 w = h = random(10, 40);
-               // x += random(-25, 40);
-                //w = random(40, 20);
+
             } else if (y > height * 3/4) {
-                // random flower color
+                // random bottom planet colors/darker tones
                 r = random(0, 255);
                 g = random(0, 255);
                 b = random(0, 255);
                 // random flower size
                 w = h = random(10, 40);
             } else {
-                // random green grass color
-
-   
+                // random mid planet colors/brighter tones
                 r = random(0, 168);
                 g = random(0, 168);
                 b = random(0, 168);
-                //random grass position
-               // x += random(-25, 40);
                 w = h = random(10, 40);
-               // w = random(40, 10);
-
             }
-            
-            // all of the color fills
             fill(r,g, b);            
             
-            // flowers
+            // bottom planets
             if ( y > height * 3/4) {
-                // flowers
                 ellipse(x, y, w, h);
-               
-                //inside 
                 fill(
                     random(247, 255),
                     random(247, 255),
@@ -71,10 +52,7 @@ function setup() {
                 );
                 ellipse(x+50, y+30, w/2, h/3);
             } else {
-                // rain & grass
-
-
-
+                // top and mid plants
                 ellipse(x, y, w, h);
             }
                 fill(
