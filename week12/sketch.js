@@ -71,8 +71,6 @@ function draw() {
         urchins.add(urchin);
       }
     }
-
-    //get rid of passed urchins
     for(var i = 0; i<urchins.length; i++)
       if(urchins[i].position.x < fish.position.x-width/2)
         urchins[i].remove();
@@ -80,7 +78,6 @@ function draw() {
 
   camera.position.x = fish.position.x + width/4;
 
-  //wrap ground
   if(camera.position.x > ground.position.x-ground.width+width/2)
     ground.position.x+=ground.width;
 
