@@ -7,14 +7,14 @@ var MIN_OPENING = 300;
 var fish, ground;
 var urchins;
 var gameOver;
-var fishImg, urchinImg, groundImg, bgImg;
+var fishImg, urchinAni, groundImg, bgImg;
 
 
 function setup() {
   createCanvas(400,600);
 
   fishImg = loadImage("assets/fish.png");
-  urchinImg = loadAnimation("assets/seaweed.png", "assets/seaweed2.png");
+  urchinAni = loadAnimation("assets/seaweed.png", "assets/seaweed2.png");
   groundImg = loadImage("assets/ground.png");
   bgImg = loadImage("assets/background.png");
   
@@ -59,7 +59,7 @@ function draw() {
     if(frameCount%60 == 0) {
       var urchinH = random(50, 300);
       var urchin = createSprite(fish.position.x + width, GROUND_Y-urchinH/2+1+100, 80, urchinH);
-      urchin.addAnimation(urchinImg);
+      urchin.addAnimation(urchinAni);
       urchins.add(urchin);
 
       //top urchin
@@ -67,7 +67,7 @@ function draw() {
         urchinH = height - (height-GROUND_Y)-(urchinH+MIN_OPENING);
         urchin = createSprite(fish.position.x + width, urchinH/2-100, 80, urchinH);
         urchin.mirrorY(-1);
-        urchin.addAnimation(urchinImg);
+        urchin.addAnimation(urchinAni);
         urchins.add(urchin);
       }
     }
